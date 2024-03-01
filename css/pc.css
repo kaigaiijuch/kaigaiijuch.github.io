@@ -1,11 +1,21 @@
+.pc{
+	display: block !important;
+}
+
+.sp{
+	display: none !important;
+}
+
+
 .header{
 	display: flex;
 }
 
 .logo_kaigaiiju-channel{
-	width: 80px;
+	width: 8%;
+	height: auto;
 	display: inline-block;
-	margin: 3%;
+	margin: 3% 50%;
 }
 
 h1{
