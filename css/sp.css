@@ -1,0 +1,27 @@
+@media only screen and (max-width:750px){
+
+  .sp{
+    display: block !important;
+  }
+  .pc{
+    display: none !important;
+  }
+
+  .logo_kaigaiiju-channel{
+    width: 35%;
+    display: inline-block;
+    margin: 5% auto 0% auto;
+  }
+
+  h1{
+    position: center;
+    display: inline-flex;
+    margin-top: 0;
+  }
+
+
+
+
+
+
+}
