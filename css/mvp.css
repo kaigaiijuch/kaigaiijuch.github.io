@@ -534,3 +534,17 @@ blockquote footer {
     background-color: rgb(202, 202, 232);
     border-radius: 10px;
 }
+
+/* 追加書き込み */
+.logo_chikahiro{
+    max-width: 13%;
+}
+
+.right{
+    text-align: right;
+}
+
+#section-1{
+    width: 80%;
+    margin: 0 auto;
+}
