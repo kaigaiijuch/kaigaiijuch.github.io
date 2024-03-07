@@ -19,7 +19,7 @@
     --justify-important: center;
     --justify-normal: left;
     --line-height: 1.5;
-    --width-card: 285px;
+    --width-card: 10%;
     --width-card-medium: 460px;
     --width-card-wide: 800px;
     --width-content: 1080px;
@@ -280,7 +280,7 @@ a {
     color: var(--color-link);
     display: inline-block;
     font-weight: bold;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 a:hover {
@@ -547,4 +547,25 @@ blockquote footer {
 #section-1{
     width: 80%;
     margin: 0 auto;
+}
+
+.width_80{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.align_center{
+    margin: 0 auto;
+}
+
+.btn_linl_podcast{
+ margin:0 5%;
+}
+
+#Follow_us{
+    background-color: var(--color-bg-secondary);
+}
+
+.btn_link_sns img{
+    width: 10%;
 }
