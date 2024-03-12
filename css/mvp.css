@@ -546,6 +546,11 @@ blockquote footer {
 
 
 /* 追加書き込み */
+
+.align_center{
+    margin: 0 auto;
+}
+
 .logo_chikahiro{
     max-width: 13%;
     margin-top: 5%;
@@ -557,12 +562,17 @@ blockquote footer {
 
 #section-1{
     width: 80%;
-    margin: 0 auto;
+    margin: 5rem auto 0 auto;
 }
 
 .width_80{
     width: 80%;
     margin: 0 auto;
+}
+
+.PC_width_60{
+    width: 60%;
+    margin: 0 auto 5rem auto;
 }
 
 .PC_width_54{
@@ -571,8 +581,49 @@ blockquote footer {
 }
 
 
-.align_center{
-    margin: 0 auto;
+
+
+#Available_on{
+    background-color: #6643b5;
+}
+
+#Available_on h2{
+    color: #fff;
+}
+
+.btn_link_podcast{
+    width: 9%;
+    margin:0 2.5%;
+    display: inline-grid;
+}
+
+.btn_link_Apple, .btn_link_google{
+    width: 8.5%;
+    margin:0 2.5%;
+    display: inline-grid;
+}
+
+
+.btn_link_listen{
+    width: 10%;
+    margin:0 2.5%;
+    display: inline-grid;
+}
+
+.btn_link_youtube {
+    width: 12%;
+    margin:0 2.5%;
+    display: inline-grid;
+}
+.btn_link_podcast:hover{
+    opacity: 90%;
+}
+
+
+.btn_link_podcast img{
+    width: 100%;
+    
+    display: inline-grid;
 }
 
 
@@ -625,6 +676,8 @@ header iframe{
     width: 70%;
     margin-top: 80px;
 }
+
+
 
 @media (max-width: 840px) {
    /* 横幅が320px以下の場合に適用するスタイル */
