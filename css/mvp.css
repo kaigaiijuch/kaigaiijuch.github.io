@@ -68,11 +68,18 @@ body {
 }
 
 footer,
-header,
-main {
+header {
     margin: 0 auto;
     max-width: var(--width-content);
     padding: 3rem 1rem;
+}
+
+
+
+main{
+    margin: 0 auto;
+    max-width: var(--width-content);
+    padding: 3rem 0rem;
 }
 
 hr {
@@ -535,9 +542,13 @@ blockquote footer {
     border-radius: 10px;
 }
 
+
+
+
 /* 追加書き込み */
 .logo_chikahiro{
     max-width: 13%;
+    margin-top: 5%;
 }
 
 .right{
@@ -554,18 +565,107 @@ blockquote footer {
     margin: 0 auto;
 }
 
+.PC_width_54{
+    width: 54%;
+    margin: 0 auto;
+}
+
+
 .align_center{
     margin: 0 auto;
 }
 
-.btn_linl_podcast{
- margin:0 5%;
+
+main{
+    padding-top: 2rem;
+}
+
+#feedback{
+    margin: 5% 0;
+}
+
+#feedback p{
+ margin: 0 auto;
+ width: auto;
+}
+
+
+
+
+#Follow_us{
+    padding:5%;
+    background: linear-gradient(140deg, #00d2ff 0%, #3a47d5 100%);
+    color: #fff;
+}
+
+
+.btn_link_sns{
+    width: 14%;
+    margin:0 5%;
+    display: inline-grid;
+}
+
+.btn_link_sns:hover{
+    opacity: 90%;
+}
+
+
+.btn_link_sns img{
+    width: 100%;
+    
+    display: inline-grid;
+}
+
+
+.logo_x{
+    width: 13%
+}
+
+header iframe{
+    width: 70%;
+    margin-top: 80px;
+}
+
+@media (max-width: 840px) {
+   /* 横幅が320px以下の場合に適用するスタイル */
+
+main{
+    padding-top: 0rem;
+}
+
+
+.PC_width_54{
+    width: 80%;
+    margin: 0 auto;
 }
 
 #Follow_us{
-    background-color: var(--color-bg-secondary);
+    padding-bottom:9%;
 }
 
-.btn_link_sns img{
-    width: 10%;
+#Available_on p{
+    width: 100%;
+    margin: 0.75rem auto;
+}
+
+#Available_on p a{
+    width: 100%;
+    margin: 0 auto;
+}
+
+#Available_on p a b{
+    width: 60%;
+    margin: 1.5% auto;
+    display: block;
+}
+
+#Available_on header{
+    padding-bottom: 1rem;
+}
+
+#feedback{
+    margin: 5% 0 15% 0;
+}
+
+
 }
