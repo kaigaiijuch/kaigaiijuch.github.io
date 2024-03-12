@@ -70,15 +70,25 @@ body {
 footer,
 header {
     margin: 0 auto;
-    max-width: var(--width-content);
+/*    max-width: var(--width-content);*/
     padding: 3rem 1rem;
+}
+
+#header{
+       
+
+}
+
+nav{
+     max-width: var(--width-content);
+     margin: 0 auto;
 }
 
 
 
 main{
     margin: 0 auto;
-    max-width: var(--width-content);
+/*    max-width: var(--width-content);*/
     padding: 3rem 0rem;
 }
 
@@ -575,8 +585,8 @@ blockquote footer {
     margin: 0 auto 5rem auto;
 }
 
-.PC_width_54{
-    width: 54%;
+.PC_width_40{
+    width: 40%;
     margin: 0 auto;
 }
 
@@ -584,28 +594,29 @@ blockquote footer {
 
 
 #Available_on{
-    background-color: #6643b5;
-}
+/*    background-color: #6643b5;*/
+    background: linear-gradient(140deg, #00d2ff 0%, #3a47d5 100%);
+    padding-top: 2rem}
 
 #Available_on h2{
     color: #fff;
 }
 
 .btn_link_podcast{
-    width: 9%;
+    width: 9.7%;
     margin:0 2.5%;
     display: inline-grid;
 }
 
 .btn_link_Apple, .btn_link_google{
-    width: 8.5%;
+    width: 9%;
     margin:0 2.5%;
     display: inline-grid;
 }
 
 
 .btn_link_listen{
-    width: 10%;
+    width: 11%;
     margin:0 2.5%;
     display: inline-grid;
 }
@@ -687,10 +698,46 @@ main{
 }
 
 
-.PC_width_54{
+.PC_width_40{
     width: 80%;
     margin: 0 auto;
 }
+
+.PC_width_60{
+    width: 80%;
+    margin: 0 auto 5rem auto;
+}
+
+.btn_link_podcast{
+    width:20.7%;
+    margin:0 5%;
+    display: inline-grid;
+}
+
+.btn_link_Apple, .btn_link_google{
+    width: 21%;
+    margin:0 5%;
+    display: inline-grid;
+}
+
+
+.btn_link_listen{
+    width: 23%;
+    margin:0 5%;
+    display: inline-grid;
+}
+
+.btn_link_youtube {
+    width: 24%;
+    margin:0 5%;
+    display: inline-grid;
+}
+
+
+#Available_on img{
+    margin-top: 2rem;
+}
+
 
 #Follow_us{
     padding-bottom:9%;
