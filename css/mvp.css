@@ -677,7 +677,7 @@ main{
 
 
 .btn_link_sns img{
-    width: 100%; 
+    width: 100%;
     display: inline-grid;
 }
 
@@ -693,7 +693,10 @@ header iframe{
     margin-bottom: 3rem;
 }
 
-
+#Follow_us p a {
+    color: #fff;
+    font-weight: normal;
+}
 
 
 
@@ -705,7 +708,7 @@ main{
 }
 
 #header{
-   padding-top: 1rem;    
+   padding-top: 1rem;
 
 }
 
