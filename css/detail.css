@@ -70,7 +70,7 @@ body {
 
 header {
     margin: 0 auto;
-/*    max-width: var(--width-content);*/
+    max-width: var(--width-content);
     padding: 3rem 1rem;
 }
 
@@ -89,9 +89,11 @@ nav{
 
 main{
     margin: 0 auto;
-/*    max-width: var(--width-content);*/
+    max-width: var(--width-content);
     padding: 3rem 0rem;
 }
+
+
 
 hr {
     background-color: var(--color-bg-secondary);
@@ -563,25 +565,24 @@ blockquote footer {
     text-align: center;
 }
 
-.logo_chikahiro{
-    max-width: 13%;
-    margin-top: 5%;
+header b{
+    margin-top: 3rem;
 }
 
 .right{
     text-align: right;
 }
 
-#section-1{
+#table_contents{
     width: 80%;
     margin: 5rem auto 0 auto;
 }
 
-#section-1 ul{
+#table_contents ul{
     list-style-type: none;
 }
 
-#section-1 ul span{
+#table_contentsul span{
     margin-right: 1rem;
 }
 
@@ -598,6 +599,91 @@ blockquote footer {
 .PC_width_40{
     width: 40%;
     margin: 0 auto;
+}
+
+
+
+#guest {
+/*    justify-content: var(--justify-normal);*/
+    padding: 2rem 0rem;
+}
+
+#guest img{
+    width: 30%;
+    margin-right: 3%;
+    display: inline-block;
+    
+}
+
+
+#guest .PC_width_50{
+    width: 50%;
+    display: inline-block;
+}
+
+#guest_info {
+    display: inline-block;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.cp_qa *, .cp_qa *:after, .cp_qa *:before {
+    font-family: 'FontAwesome', sans-serif;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.cp_qa dt {
+    position: relative;
+    margin: 0 0 1.5em 0;
+}
+.cp_qa dd {
+    position: relative;
+    margin: 0 0 2em 0;
+    padding: 0 0 1.5em 2em;
+    border-bottom: 1px dotted #0097a7;
+}
+.cp_qa dt::before, .cp_qa dd::before {
+    font-size: 1.2em;
+    margin: 0 0.5em 0 0;
+    color: #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+    width: 1.3em;
+    height: 1.3em;
+    line-height: 1.2em;
+}
+.cp_qa dt::before {
+    padding: 0.1em 0.3em;
+    content: 'Q';
+    background: #f57c00;
+}
+.cp_qa dd::before {
+    padding: 0.12em 0.45em;
+    content: 'A';
+    background: #0097a7;
+}
+.cp_qa dt::after, .cp_qa dd::after {
+    position: absolute;
+    top: 0.5em;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    content: '';
+    border-width: 5px 0 5px 5px;
+    border-style: solid;
+}
+.cp_qa dt::after {
+    left: 1.5em;
+    border-color: transparent transparent transparent #f57c00;
+}
+.cp_qa dd::after {
+    left: 3.5em;
+    border-color: transparent transparent transparent #0097a7;
+}
+
+
+#guest_name{
+    margin-left: 1rem;
 }
 
 
@@ -648,46 +734,17 @@ blockquote footer {
 }
 
 
+
+
+
+
+
+
 main{
     padding-top: 2rem;
 }
 
-#feedback{
-    margin: 5% 0;
-}
 
-#feedback p{
- margin: 0 auto;
- width: auto;
-}
-
-
-#Follow_us{
-/*    padding:5%;*/
-    background: linear-gradient(140deg, #00d2ff 0%, #3a47d5 100%);
-    color: #fff;
-}
-
-
-.btn_link_sns{
-    width: 10%;
-    margin:0 3%;
-    display: inline-grid;
-}
-
-.logo_x{
-    width: 8%
-}
-
-.btn_link_sns:hover{
-    opacity: 90%;
-}
-
-
-.btn_link_sns img{
-    width: 100%;
-    display: inline-grid;
-}
 
 
 
@@ -701,10 +758,7 @@ header iframe{
     margin-bottom: 3rem;
 }
 
-#Follow_us p a {
-    color: #fff;
-    font-weight: normal;
-}
+
 
 
 
@@ -716,7 +770,7 @@ main{
 }
 
 #header{
-   padding-top: 1rem;
+   padding-top: 1rem;    
 
 }
 
@@ -724,7 +778,6 @@ main{
 .PC_width_40, .PC_width_60{
     width: 80%;
 }
-
 
 #Available_on .btn_link_podcast{
     width:20.7%;
@@ -764,29 +817,6 @@ main{
 
 
 
-#Follow_us .btn_link_sns{
-    width: 20%;
-    margin:0 4.5%;
-
-}
-
-#Follow_us .logo_x{
-    width: 17%;
-}
-
-#Follow_us .sp_line2{
-    margin-top: 2.5rem;
-
-
-#Follow_us{
-    padding-bottom:9%;
-}
-
-
-
-#feedback{
-    margin: 5% 0 15% 0;
-}
 
 
 }
