@@ -604,7 +604,6 @@ header b{
 
 
 #guest {
-/*    justify-content: var(--justify-normal);*/
     padding: 2rem 0rem;
 }
 
@@ -625,6 +624,8 @@ header b{
     display: inline-block;
     flex-wrap: wrap;
     margin: 0 auto;
+    justify-content: var(--justify-important);
+    width: 82%;
 }
 
 .cp_qa *, .cp_qa *:after, .cp_qa *:before {
@@ -632,15 +633,16 @@ header b{
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
 }
+
 .cp_qa dt {
     position: relative;
-    margin: 0 0 1.5em 0;
+    margin: 0 0 1em 0;
 }
 .cp_qa dd {
     position: relative;
-    margin: 0 0 2em 0;
-    padding: 0 0 1.5em 2em;
-    border-bottom: 1px dotted #0097a7;
+    margin: 0 0 1em 0;
+    padding: 0 0 1em 2em;
+    border-bottom: 1px dotted #999999;
 }
 .cp_qa dt::before, .cp_qa dd::before {
     font-size: 1.2em;
@@ -653,14 +655,18 @@ header b{
     line-height: 1.2em;
 }
 .cp_qa dt::before {
-    padding: 0.1em 0.3em;
+    padding: 0.07em 0.25em;
     content: 'Q';
-    background: #f57c00;
+    font-size: 1rem;
+/*    background: #f57c00;*/
+    background: #d264b6;
 }
 .cp_qa dd::before {
-    padding: 0.12em 0.45em;
+    padding: 0em 0.3em;
     content: 'A';
-    background: #0097a7;
+    font-size: 1rem;
+/*    background: #0097a7;*/
+    background-color: var(--color-link); 
 }
 .cp_qa dt::after, .cp_qa dd::after {
     position: absolute;
@@ -673,13 +679,152 @@ header b{
     border-style: solid;
 }
 .cp_qa dt::after {
-    left: 1.5em;
-    border-color: transparent transparent transparent #f57c00;
+    left: 1.2em;
+    top: 0.4em;
+    border-color: transparent transparent transparent #d264b6;
 }
 .cp_qa dd::after {
-    left: 3.5em;
-    border-color: transparent transparent transparent #0097a7;
+    left: 3.22em;
+    top: 0.48em;
+    border-color: transparent transparent transparent var(--color-link);
 }
+
+/*「続きを読む」以下をグラデーションで隠すボタン*/
+.readmore {
+  position: relative;
+  margin: 50px auto 0;
+  padding: 0 0 75px;
+}
+
+.readmore input[type="checkbox"]+label,
+input[type="radio"]+label {
+    position: absolute;
+    font-weight: normal;
+    top: initial;
+}
+
+.readmore label {
+  position: absolute;
+  display: table;
+  left: 50%;
+  bottom: 0;
+  margin: 0 auto;
+  width: 200px;
+  padding: 10px 0;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  background-color: var(--color-link);
+  transform: translateX(-50%);
+  cursor: pointer;
+  z-index: 1;
+    border: 2px solid var(--color-link);
+    color: var(--color-bg);
+    font-size: medium;
+    font-weight: bold;
+    line-height: var(--line-height);
+    margin: 0.5rem 0;
+    padding: 1rem 2rem;
+}
+
+.readmore label::before{
+  content: '続きを見る';
+}
+
+.readmore input[type="checkbox"]:checked ~ label::before {
+  content: '元に戻す';
+}
+
+.readmore input[type="checkbox"]{
+  display: none;
+}
+
+.readmore-content {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+}
+
+.readmore input[type="checkbox"]:checked ~ .readmore-content {
+  height: auto;
+}
+
+.readmore-content::before {
+  position: absolute;
+  display: block;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  background: linear-gradient( rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, #fff 100%);
+}
+
+.readmore input[type="checkbox"]:checked ~ .readmore-content::before {
+  display: none;
+}
+
+
+
+
+　
+.cp_box *, .cp_box *:before, .cp_box *:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.cp_box {
+    position: relative;
+}
+.cp_box label {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    width: 100%;
+    height: 140px; /* グラデーションの高さ */
+    cursor: pointer;
+    text-align: center;
+    /* 以下グラデーションは背景を自身のサイトに合わせて設定してください */
+    background: linear-gradient(to bottom, rgba(250, 252, 252, 0) 0%, rgba(250, 252, 252, 0.95) 90%);
+}
+.cp_box input:checked + label {
+    background: inherit; /* 開いた時にグラデーションを消す */
+}
+.cp_box label:after {
+    line-height: 2.5rem;
+    position: absolute;
+    z-index: 2;
+    bottom: 20px;
+    left: 50%;
+    width: 16rem;
+    font-family: FontAwesome;
+    content: '\f13a'' 続きをよむ';
+    transform: translate(-50%, 0);
+    letter-spacing: 0.05em;
+    color: #ffffff;
+    border-radius: 20px;
+    background-color: rgba(27, 37, 56, 1);
+}
+.cp_box input {
+    display: none;
+}
+.cp_box .cp_container {
+    overflow: hidden;
+    height: 250px; /* 開く前に見えている部分の高さ */
+    transition: all 0.5s;
+}
+.cp_box input:checked + label {
+    /* display: none ; 閉じるボタンを消す場合解放 */
+}
+.cp_box input:checked + label:after {
+    font-family: FontAwesome;
+    content: '\f139'' 閉じる';
+}
+.cp_box input:checked ~ .cp_container {
+    height: auto;
+    padding-bottom: 80px; /* 閉じるボタンのbottomからの位置 */
+    transition: all 0.5s;
+}
+
 
 
 #guest_name{
