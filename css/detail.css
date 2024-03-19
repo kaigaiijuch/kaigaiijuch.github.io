@@ -89,8 +89,7 @@ nav{
 
 main{
     margin: 0 auto;
-    max-width: var(--width-content);
-    padding: 3rem 0rem;
+/*    max-width: var(--width-content);*/
 }
 
 
@@ -99,7 +98,7 @@ hr {
     background-color: var(--color-bg-secondary);
     border: none;
     height: 1px;
-    margin: 4rem 0;
+    margin: 3rem 0;
     width: 100%;
 }
 
@@ -560,6 +559,8 @@ blockquote footer {
 
 /* 追加書き込み */
 
+
+
 .align_center{
     margin: 0 auto;
     text-align: center;
@@ -567,6 +568,11 @@ blockquote footer {
 
 header b{
     margin-top: 3rem;
+    text-spacing: 0.08em;
+}
+
+#header_top {
+    padding: 1rem 0 0 1rem;
 }
 
 .right{
@@ -575,8 +581,13 @@ header b{
 
 #table_contents{
     width: 80%;
-    margin: 5rem auto 0 auto;
+    margin: 2rem auto 0 auto;
 }
+
+#table_contents header{
+    padding-bottom: 0rem;
+}
+
 
 #table_contents ul{
     list-style-type: none;
@@ -586,47 +597,71 @@ header b{
     margin-right: 1rem;
 }
 
-.width_80{
-    width: 80%;
-    margin: 0 auto;
-}
-
-.PC_width_60{
-    width: 60%;
-    margin: 0 auto 5rem auto;
-}
-
-.PC_width_40{
-    width: 40%;
-    margin: 0 auto;
-}
 
 
 
 #guest {
-    padding: 2rem 0rem;
+    padding: 0rem;
+        max-width: var(--width-content);
+    margin: 0 auto
+}
+
+#guest .guest_img{
+    width: 25%;
+    margin-right: 5%;
 }
 
 #guest img{
-    width: 30%;
-    margin-right: 3%;
+   
     display: inline-block;
     
 }
 
 
-#guest .PC_width_50{
-    width: 50%;
+
+
+
+#guest .PC_width_60{
+    width: 60%;
     display: inline-block;
+}
+
+#outline{
+    margin-top: 1rem;
+
 }
 
 #guest_info {
     display: inline-block;
     flex-wrap: wrap;
-    margin: 0 auto;
+    margin: 0 auto 2rem auto;
     justify-content: var(--justify-important);
-    width: 82%;
+    max-width: var(--width-content);
+     width: 62%;
 }
+
+
+
+
+#guest_info h2{
+    text-align: center;
+}
+
+#guest_info h4{
+    letter-spacing: 0.05em;
+    line-height: 1;
+    margin-bottom: 0;
+}
+
+
+
+#guest_name{
+    margin-left: 1rem;
+}
+
+
+
+/*ここからQ&Aのデコレーション*/
 
 .cp_qa *, .cp_qa *:after, .cp_qa *:before {
     font-family: 'FontAwesome', sans-serif;
@@ -636,12 +671,12 @@ header b{
 
 .cp_qa dt {
     position: relative;
-    margin: 0 0 1em 0;
+    margin: 0 0 0.5em 0;
 }
 .cp_qa dd {
     position: relative;
-    margin: 0 0 1em 0;
-    padding: 0 0 1em 2em;
+    margin: 0 0 0.5em 0;
+    padding: 0 0 0.5em 2em;
     border-bottom: 1px dotted #999999;
 }
 .cp_qa dt::before, .cp_qa dd::before {
@@ -652,7 +687,7 @@ header b{
     display: inline-block;
     width: 1.3em;
     height: 1.3em;
-    line-height: 1.2em;
+    line-height: 1em;
 }
 .cp_qa dt::before {
     padding: 0.07em 0.25em;
@@ -689,85 +724,26 @@ header b{
     border-color: transparent transparent transparent var(--color-link);
 }
 
+/*ここまでQ&Aのデコレーション*/
+
+
 /*「続きを読む」以下をグラデーションで隠すボタン*/
-.readmore {
-  position: relative;
-  margin: 50px auto 0;
-  padding: 0 0 75px;
+
+.cp_box input, .cp_box label, .cp_box select, textarea {
+    
+     max-width: initial; 
+     margin-bottom: 0;
 }
 
-.readmore input[type="checkbox"]+label,
+
+
+.cp_box input[type="checkbox"]+label,
 input[type="radio"]+label {
     position: absolute;
     font-weight: normal;
     top: initial;
 }
 
-.readmore label {
-  position: absolute;
-  display: table;
-  left: 50%;
-  bottom: 0;
-  margin: 0 auto;
-  width: 200px;
-  padding: 10px 0;
-  color: #fff;
-  text-align: center;
-  border-radius: 5px;
-  background-color: var(--color-link);
-  transform: translateX(-50%);
-  cursor: pointer;
-  z-index: 1;
-    border: 2px solid var(--color-link);
-    color: var(--color-bg);
-    font-size: medium;
-    font-weight: bold;
-    line-height: var(--line-height);
-    margin: 0.5rem 0;
-    padding: 1rem 2rem;
-}
-
-.readmore label::before{
-  content: '続きを見る';
-}
-
-.readmore input[type="checkbox"]:checked ~ label::before {
-  content: '元に戻す';
-}
-
-.readmore input[type="checkbox"]{
-  display: none;
-}
-
-.readmore-content {
-  position: relative;
-  height: 600px;
-  overflow: hidden;
-}
-
-.readmore input[type="checkbox"]:checked ~ .readmore-content {
-  height: auto;
-}
-
-.readmore-content::before {
-  position: absolute;
-  display: block;
-  content: "";
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 300px;
-  background: linear-gradient( rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, #fff 100%);
-}
-
-.readmore input[type="checkbox"]:checked ~ .readmore-content::before {
-  display: none;
-}
-
-
-
-
-　
 .cp_box *, .cp_box *:before, .cp_box *:after {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -780,36 +756,47 @@ input[type="radio"]+label {
     z-index: 1;
     bottom: 0;
     width: 100%;
-    height: 140px; /* グラデーションの高さ */
+    height: 80px; /* グラデーションの高さ */
     cursor: pointer;
     text-align: center;
     /* 以下グラデーションは背景を自身のサイトに合わせて設定してください */
-    background: linear-gradient(to bottom, rgba(250, 252, 252, 0) 0%, rgba(250, 252, 252, 0.95) 90%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, #fff 100%);
 }
 .cp_box input:checked + label {
     background: inherit; /* 開いた時にグラデーションを消す */
 }
+
+
 .cp_box label:after {
-    line-height: 2.5rem;
+    line-height: var(--line-height);
+/*    line-height: 2.5rem;*/
     position: absolute;
     z-index: 2;
-    bottom: 20px;
-    left: 50%;
+    bottom: 50%;
+    left: 96%;
     width: 16rem;
     font-family: FontAwesome;
-    content: '\f13a'' 続きをよむ';
+    content: ' 続きを読む';
     transform: translate(-50%, 0);
     letter-spacing: 0.05em;
-    color: #ffffff;
-    border-radius: 20px;
-    background-color: rgba(27, 37, 56, 1);
+/*    background-color: var(--color-link);*/
+/*    border: 1.5px solid var(--color-link);*/
+/*    color: var(--color-bg);*/
+    background-color:var(--color-bg) ;
+    color: var(--color-link);
+    border-radius: 5px;
+    font-size: medium;
+    padding: 0.5rem 2rem;
+/*    font-weight: bold;*/
 }
+
+
 .cp_box input {
     display: none;
 }
 .cp_box .cp_container {
     overflow: hidden;
-    height: 250px; /* 開く前に見えている部分の高さ */
+    height: 95px; /* 開く前に見えている部分の高さ */
     transition: all 0.5s;
 }
 .cp_box input:checked + label {
@@ -817,7 +804,7 @@ input[type="radio"]+label {
 }
 .cp_box input:checked + label:after {
     font-family: FontAwesome;
-    content: '\f139'' 閉じる';
+    content: ' 閉じる';
 }
 .cp_box input:checked ~ .cp_container {
     height: auto;
@@ -825,69 +812,19 @@ input[type="radio"]+label {
     transition: all 0.5s;
 }
 
+/*ここまで 続きを読む」以下をグラデーションで隠すボタン*/
 
 
-#guest_name{
-    margin-left: 1rem;
+
+
+
+
+#writing_detail{
+    max-width: var(--width-content);
+    width: 72%;
+    margin: 0 auto 2rem auto;
 }
 
-
-#Available_on{
-/*    background-color: #6643b5;*/
-    background: linear-gradient(140deg, #00d2ff 0%, #3a47d5 100%);
-    padding-top: 2rem}
-
-#Available_on h2{
-    color: #fff;
-}
-
-.btn_link_podcast{
-    width: 9.7%;
-    margin:0 2.5%;
-    display: inline-grid;
-}
-
-.btn_link_Apple, .btn_link_google{
-    width: 9%;
-    margin:0 2.5%;
-    display: inline-grid;
-}
-
-
-.btn_link_listen{
-    width: 11%;
-    margin:0 2.5%;
-    display: inline-grid;
-}
-
-.btn_link_youtube {
-    width: 10%;
-    margin:0 2.5%;
-    display: inline-grid;
-    position: relative;
-    top: -13%;
-}
-
-#Available_on img:hover {
-    opacity: 90%;
-}
-
-
-.btn_link_podcast img{
-    width: 100%;
-    display: inline-grid;
-}
-
-
-
-
-
-
-
-
-main{
-    padding-top: 2rem;
-}
 
 
 
@@ -899,9 +836,6 @@ header iframe{
     margin-top: 80px;
 }
 
-#footer_contents{
-    margin-bottom: 3rem;
-}
 
 
 
@@ -910,9 +844,7 @@ header iframe{
 @media (max-width: 840px) {
    /* 横幅が840px以下の場合に適用するスタイル */
 
-main{
-    padding-top: 0rem;
-}
+
 
 #header{
    padding-top: 1rem;    
@@ -924,44 +856,4 @@ main{
     width: 80%;
 }
 
-#Available_on .btn_link_podcast{
-    width:20.7%;
-    margin:0 5%;
-}
 
-#Available_on .btn_link_Apple, #Available_on .btn_link_google{
-    width: 21%;
-    margin:0 5%;
-}
-
-#Available_on .btn_link_listen{
-    width: 23%;
-    margin:0 5%;
-}
-
-#Available_on .btn_link_youtube {
-    width: 23%;
-    margin:auto 5%;
-}
-
-#Available_on .btn_link_youtube {
-    position: relative;
-    top: -0%;
-}
-
-
-#Available_on img{
-    margin-top: 2rem;
-}
-
-
-#Available_on header{
-    padding-bottom: 1rem;
-}
-
-
-
-
-
-
-}
