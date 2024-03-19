@@ -7,6 +7,10 @@
     width: 60%;
 }
 
+.PC_width_50{
+    width: 40%;
+}
+
 
 .PC_width_40{
     width: 40%;
@@ -112,6 +116,18 @@
 
 main{
     padding-top: 0rem;
+}
+
+h2{
+    font-size: 1.3em;
+}
+
+p{
+    font-size: 0.95em;
+}
+
+li, dl {
+    font-size: 0.95em;
 }
 
 
