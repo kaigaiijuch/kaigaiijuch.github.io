@@ -858,14 +858,50 @@ input[type="radio"]+label {
     margin-right: 0.3em;
 }
 
+#writing_detail p small{
+    position: relative;
+    top: -0.4em;
+    text-spacing: 0.08em;
+    margin-right: 0.3em;
+}
+
 
 #writing_detail .icon_talking{
     height: 1.7em;
     position: relative;
-    top: 0.5em;
+    top: 0.4em;
     margin-right: 0.5%;
     border-radius: 50%;
 }
+
+#writing_detail #footnote{
+    font-size: small;
+    margin-top: 5em;
+}
+
+.fixed_iframe {
+    
+    
+    width: 100%;
+    
+}
+
+
+
+.fixed_iframe iframe{
+    position: fixed;
+    z-index: 999;
+    bottom: 0;
+    right: 0%;
+    width: 30%;
+    display: initial;
+    flex-wrap: initial;
+    justify-content: initial;
+        
+    
+}
+
+
 
 
 
@@ -910,8 +946,12 @@ nav{
 }
 
 header iframe {
-    width: 60%;
+    width: 75%;
     margin-top: 1.5em;
+}
+
+#summary{
+    width: 90%;
 }
 
 #guest{
@@ -1036,6 +1076,23 @@ header iframe {
     max-width: var(--width-content);
     width: 90%;
     margin:  0 auto 2rem auto;
+}
+
+#writing_detail #footnote{
+    margin-top: 2rem;
+}
+
+.fixed_iframe iframe{
+    position: fixed;
+    z-index: 999;
+    bottom: 0;
+    left: 0%;
+    width: 100%;
+    display: initial;
+    flex-wrap: initial;
+    justify-content: initial;
+        
+    
 }
 
 }
