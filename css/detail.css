@@ -71,7 +71,7 @@ body {
 header {
     margin: 0 auto;
     max-width: var(--width-content);
-    padding: 3rem 1rem;
+    padding: 2em 1em;
 }
 
 footer{
@@ -168,7 +168,7 @@ nav {
     display: flex;
     font-weight: bold;
     justify-content: space-between;
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
 }
 
 nav ul {
@@ -561,6 +561,7 @@ blockquote footer {
 
 #header_top{
     max-width: var(--width-content);
+    padding: 1rem;
 }
 
 .align_center{
@@ -579,18 +580,31 @@ header b{
 }
 
 
+#summary {
+    max-width: var(--width-content);
+    margin: 1em auto;
+    width: 60%;
+}
+
+
+#summary p{
+    text-wrap: balance
+}
+
+
 
 
 
 
 #guest {
-    padding: 0rem;
+    padding: 0em;
     max-width: var(--width-content);
-    margin: 2rem auto 1rem auto;
+    margin: 2em auto 1em auto;
+    
 }
 
 #guest .guest_img{
-    width: 25%;
+    width: 23%;
     margin-right: 5%;
 }
 
@@ -602,13 +616,8 @@ header b{
 
 
 
-
-
-
-
-
 #guest .PC_width_60{
-    width: 60%;
+    width: 55%;
     display: inline-block;
 }
 
@@ -616,13 +625,14 @@ header b{
     margin-top: 0;
 }
 
-#outline{
-    margin-top: 1rem;
+#guest_introduction{
+    margin-top: 2em;
 
 }
 
-#outline p{
-    text-wrap: balance;
+
+#guest_introduction a{
+    font-weight: normal;
 }
 
 #guest_info {
@@ -822,6 +832,7 @@ input[type="radio"]+label {
 
 #table_contents ul{
     list-style-type: none;
+    padding-inline-start: 20px;
 }
 
 #table_contentsul span{
@@ -836,10 +847,24 @@ input[type="radio"]+label {
     margin:  0 auto 2rem auto;
 }
 
+#writing_detail p {
+    margin: 0.2rem 0;
+}
+
 
 
 #writing_detail p span{
-    font-weight: bold;
+    font-weight: semi-bold;
+    margin-right: 0.3em;
+}
+
+
+#writing_detail .icon_talking{
+    height: 1.7em;
+    position: relative;
+    top: 0.5em;
+    margin-right: 0.5%;
+    border-radius: 50%;
 }
 
 
@@ -885,8 +910,8 @@ nav{
 }
 
 header iframe {
-    width: 90%;
-    margin-top: 2rem;
+    width: 60%;
+    margin-top: 1.5em;
 }
 
 #guest{
@@ -927,7 +952,7 @@ header iframe {
 }
 
 
-#guest #outline{
+#guest #guest_introduction{
     width: 100%;
 }
 
