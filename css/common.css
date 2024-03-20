@@ -1,3 +1,9 @@
+/*PCでは無効（改行しない）*/
+.sma{
+    display: none;
+}
+
+
 .width_80{
     width: 80%;
     margin: 0 auto;
@@ -140,6 +146,11 @@ p{
 li, dl {
     font-size: 0.95em;
 }
+
+/*スマートフォンでは有効（改行する）*/
+   .sma{
+        display: block;
+    }
 
 
 #Available_on .btn_link_podcast{
