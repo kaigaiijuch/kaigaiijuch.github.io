@@ -572,72 +572,155 @@ blockquote footer {
     text-align: right;
 }
 
-#section-1{
-    width: 80%;
+#story_list{
+    max-width: var(--width-content);
+    width: 76%;
     margin: 5rem auto 0 auto;
 }
 
-.width_80{
-    width: 80%;
-    margin: 0 auto;
-}
+#story_list ul{
+    max-width: var(--width-content);
+    width: 90%;
+    padding-inline-start: 0px;
+    list-style-type: none;
 
-.PC_width_60{
-    width: 60%;
-    margin: 0 auto 5rem auto;
-}
-
-.PC_width_40{
-    width: 40%;
-    margin: 0 auto;
 }
 
 
-#Available_on{
-/*    background-color: #6643b5;*/
-    background: linear-gradient(140deg, #00d2ff 0%, #3a47d5 100%);
-    padding-top: 2rem}
 
-#Available_on h2{
-    color: #fff;
+
+
+
+/*コンテンツ幅やセクション見出しのスタイリング*/
+
+  
+
+  
+/*ここから3カラム記事エリアのスタイリング*/
+.card_items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+  
+.card_items > li {
+  width: 31%;
+  margin-right: 3.5%;
+  margin-bottom: 35px;
+  list-style: none;
+
+}
+  
+.card_items > li:nth-of-type(3n) {
+  margin-right: 0;
+}
+  
+.card_item {
+  position: relative;
+  display: block;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+  
+/*画像エリアのスタイリング*/
+.card_item:hover .card_item_imgWrapper::before {
+  opacity: 1;
+}
+  
+.card_item:hover .card_item_imgWrapper::after {
+  content: "check the detail";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  opacity: 1;
+  font-size: 1.5em;
+}
+  
+.card_item_imgWrapper {
+  position: relative;
+  padding-top: 56.25%;
+  overflow: hidden;
+}
+  
+.card_item_imgWrapper::before, .card_item_imgWrapper::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fafafa;
+  background-color: rgba(0, 0, 0, 0.4);
+  font-size: 2rem;
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
+  opacity: 0;
+}
+  
+.card_item_imgWrapper > img {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+  
+/*日時、タイトル、抜粋文テキスト部分のスタイリング*/
+.card_item_body {
+  padding: 15px;
+  position: relative;
 }
 
-.btn_link_podcast{
-    width: 9.7%;
-    margin:0 2.5%;
-    display: inline-grid;
+
+  
+.card_item_body > .card_item_time {
+  font-weight: normal;
+  display: block;
+  color: #666666;
+
+}
+  
+.card_item_body > .card_item_ttl {
+  color: #333;
+  line-height: 1.3;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+  
+.card_item_body > .card_item_txt {
+    margin-top: 0;
+   margin-bottom: 0.3em;
+    display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  font-weight: normal;
+  color: #666666;
+  line-height: 1.5;
+  margin-bottom: 10px;
 }
 
-.btn_link_Apple, .btn_link_google{
-    width: 9%;
-    margin:0 2.5%;
-    display: inline-grid;
-}
 
 
-.btn_link_listen{
-    width: 11%;
-    margin:0 2.5%;
-    display: inline-grid;
-}
-
-.btn_link_youtube {
-    width: 10%;
-    margin:0 2.5%;
-    display: inline-grid;
-    position: relative;
-    top: -13%;
-}
-
-#Available_on img:hover {
-    opacity: 90%;
-}
 
 
-.btn_link_podcast img{
-    width: 100%;
-    display: inline-grid;
-}
+
+
 
 
 main{
@@ -653,33 +736,13 @@ main{
  width: auto;
 }
 
-
-#Follow_us{
-/*    padding:5%;*/
-    background: linear-gradient(140deg, #00d2ff 0%, #3a47d5 100%);
-    color: #fff;
+.btn_listen_more{
+    margin: 0 auto;
+    width: auto;
 }
 
 
-.btn_link_sns{
-    width: 10%;
-    margin:0 3%;
-    display: inline-grid;
-}
 
-.logo_x{
-    width: 8%
-}
-
-.btn_link_sns:hover{
-    opacity: 90%;
-}
-
-
-.btn_link_sns img{
-    width: 100%;
-    display: inline-grid;
-}
 
 
 
@@ -689,23 +752,13 @@ header iframe{
     margin-top: 80px;
 }
 
-#footer_contents{
-    margin-bottom: 3rem;
-}
-
-#Follow_us p a {
-    color: #fff;
-    font-weight: normal;
-}
 
 
 
 @media (max-width: 840px) {
    /* 横幅が840px以下の場合に適用するスタイル */
 
-main{
-    padding-top: 0rem;
-}
+
 
 #header{
    padding-top: 1rem;
@@ -717,68 +770,189 @@ main{
     width: 80%;
 }
 
-
-#Available_on .btn_link_podcast{
-    width:20.7%;
-    margin:0 5%;
-}
-
-#Available_on .btn_link_Apple, #Available_on .btn_link_google{
-    width: 21%;
-    margin:0 5%;
-}
-
-#Available_on .btn_link_listen{
-    width: 23%;
-    margin:0 5%;
-}
-
-#Available_on .btn_link_youtube {
-    width: 23%;
-    margin:auto 5%;
-}
-
-#Available_on .btn_link_youtube {
-    position: relative;
-    top: -0%;
-}
-
-
-#Available_on img{
-    margin-top: 2rem;
-}
-
-
-#Available_on header{
-    padding-bottom: 1rem;
-}
-
-
-
-
-#Follow_us .btn_link_sns{
-    width: 20%;
-    margin:0 4.5%;
-
-}
-
-#Follow_us .logo_x{
-    width: 17%;
-}
-
-#Follow_us .sp_line2{
-    margin-top: 2.5rem;
-
-
-#Follow_us{
-    padding-bottom:9%;
-}
-
-
-
 #feedback{
     margin: 5% 0 15% 0;
 }
 
+
+#story_list header{
+   padding-top: 3rem; 
+   padding-bottom: 1em;   
+
+}
+
+#story_list{
+    max-width: var(--width-content);
+    margin: 0 auto;
+    width: 90%;
+}
+
+#story_list ul{
+    max-width: var(--width-content);
+    width: 100%;
+    padding-inline-start: 0px;
+    /*display: inline-block;
+    margin: 0 auto;*/
+    position: relative;
+
+}
+
+/*ここから3カラム記事エリアのスタイリング*/
+.card_items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+  
+.card_items > li {
+  width: 100%;
+  margin-right: 0;
+  margin-bottom: 3%;
+  list-style: none;
+  position: relative;
+}
+  
+.card_items > li:nth-of-type(3n) {
+  margin-right: 0;
+}
+  
+.card_item {
+  position: relative;
+  display: block;
+  padding-bottom: 3%;
+  border-bottom: 1px solid #ADACB1;
+  -webkit-box-shadow: initial;
+  box-shadow: initial;
+}
+  
+/*画像エリアのスタイリング*/
+.card_item:hover .card_item_imgWrapper::before {
+  opacity: 1;
+}
+  
+.card_item:hover .card_item_imgWrapper::after {
+  content: "";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  opacity: 1;
+  font-size: 1.5em;
+}
+  
+.card_item_imgWrapper {
+  position: relative;
+  width: 20%;
+  padding-top: 29%;
+  overflow: hidden;
+  display: inline-block;
+}
+  
+.card_item_imgWrapper::before, .card_item_imgWrapper::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 0%;
+  color: #fafafa;
+  background-color: rgba(0, 0, 0, 0.4);
+  font-size: 0rem;
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
+  opacity: 0;
+}
+  
+.card_item_imgWrapper > img {
+  position: absolute;
+  margin-right: 3%;
+  display: flex;
+    display: inline-block;
+  top: 50%;
+  width: 100%;
+/*  height: 100%;*/
+  /*-webkit-transform: translateY(-50%);
+  transform: translateY(-50%);*/
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+  
+/*日時、タイトル、抜粋文テキスト部分のスタイリング*/
+.card_item_body {
+  padding: 1% 3%;
+  position: relative;
+  top: -9px;
+  display: inline-block;
+    width: 72%;
+}
+
+  
+.card_item_body > .card_item_time {
+  font-weight: normal;
+  display: block;
+  text-align: right;
+  color: #666666;
+  font-size: 0.8em;
+
+}
+  
+.card_item_body > .card_item_ttl {
+  color: #333;
+  line-height: 1.3;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 0.9em;
+}
+  
+.card_item_body > .card_item_txt {
+    margin-top: 0;
+   margin-bottom: 0.3em;
+    display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  font-weight: normal;
+  color: #666666;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  font-size: 0.85em;
+}
+
+
+
+
+
+
+#story_list ul li a{   
+    position: relative;
+}
+
+
+
+
+#story_list p{
+   margin-top: 0;
+   margin-bottom: 0.5em;
+     display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+
+}
+
+hr{
+        margin: 2rem 0 4rem 0;
+}
 
 }
