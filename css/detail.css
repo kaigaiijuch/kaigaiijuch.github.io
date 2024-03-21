@@ -559,6 +559,11 @@ blockquote footer {
 
 /* 追加書き込み */
 
+/*PCでは無効（改行しない）*/
+.sma{
+    display: none;
+}
+
 #header_top{
     max-width: var(--width-content);
     padding: 1rem;
@@ -879,27 +884,6 @@ input[type="radio"]+label {
     margin-top: 5em;
 }
 
-.fixed_iframe {
-    
-    
-    width: 100%;
-    
-}
-
-
-
-.fixed_iframe iframe{
-    position: fixed;
-    z-index: 999;
-    bottom: 0;
-    right: 0%;
-    width: 30%;
-    display: initial;
-    flex-wrap: initial;
-    justify-content: initial;
-        
-    
-}
 
 
 
@@ -1082,18 +1066,12 @@ header iframe {
     margin-top: 2rem;
 }
 
-.fixed_iframe iframe{
-    position: fixed;
-    z-index: 999;
-    bottom: 0;
-    left: 0%;
-    width: 100%;
-    display: initial;
-    flex-wrap: initial;
-    justify-content: initial;
-        
-    
-}
+/*スマートフォンでは有効（改行する）*/
+   .sma{
+        display: block;
+    }
+
+
 
 }
 
