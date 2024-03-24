@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kaigaiiju.ch/sitemap.xml.gz
