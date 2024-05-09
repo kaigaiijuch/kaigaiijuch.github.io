@@ -6,16 +6,22 @@ on:
     types:
       - labeled
       - opened
+      - edited
 jobs:
   automerge:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pull-requests: write
+    env:
+      GITHUB_TOKEN: "${{ secrets.DEPLOY_BOT_TOKEN }}"
     steps:
+      - name: Auto approve pull request
+        uses: hmarr/auto-approve-action@v4
+        if: contains(github.event.pull_request.labels.*.name, vars.AUTOMERGE_LABELS)
       - id: automerge
         name: Merge pull requests (automerge-action)
         uses: "pascalgn/automerge-action@v0.16.3"
         env:
-          GITHUB_TOKEN: "${{ secrets.DEPLOY_BOT_TOKEN }}"
-          UPDATE_METHOD: "squash"
+          MERGE_METHOD: "squash"
           MERGE_LABELS: "${{ vars.AUTOMERGE_LABELS }}"
