@@ -6,6 +6,7 @@ on:
     types:
       - labeled
       - opened
+      - edited
 jobs:
   automerge:
     runs-on: ubuntu-latest
