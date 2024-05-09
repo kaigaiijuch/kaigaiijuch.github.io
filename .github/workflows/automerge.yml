@@ -17,5 +17,5 @@ jobs:
         uses: "pascalgn/automerge-action@v0.16.3"
         env:
           GITHUB_TOKEN: "${{ secrets.DEPLOY_BOT_TOKEN }}"
-          UPDATE_METHOD: "squash"
+          MERGE_METHOD: "squash"
           MERGE_LABELS: "${{ vars.AUTOMERGE_LABELS }}"
