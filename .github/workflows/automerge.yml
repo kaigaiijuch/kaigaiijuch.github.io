@@ -22,5 +22,6 @@ jobs:
       - id: automerge
         name: Merge pull requests (automerge-action)
         uses: "pascalgn/automerge-action@v0.16.3"
+        env:
           MERGE_METHOD: "squash"
           MERGE_LABELS: "${{ vars.AUTOMERGE_LABELS }}"
