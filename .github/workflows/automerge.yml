@@ -12,7 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pull-requests: write
     steps:
+      - uses: hmarr/auto-approve-action@v4
+        if: contains(github.event.pull_request.labels.*.name, vars.AUTOMERGE_LABELS)
       - id: automerge
         name: Merge pull requests (automerge-action)
         uses: "pascalgn/automerge-action@v0.16.3"
