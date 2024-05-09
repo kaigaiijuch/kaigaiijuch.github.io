@@ -16,6 +16,9 @@ jobs:
     env:
       GITHUB_TOKEN: "${{ secrets.DEPLOY_BOT_TOKEN }}"
     steps:
+      - name: Auto approve pull request
+        uses: hmarr/auto-approve-action@v4
+        if: contains(github.event.pull_request.labels.*.name, vars.AUTOMERGE_LABELS)
       - id: automerge
         name: Merge pull requests (automerge-action)
         uses: "pascalgn/automerge-action@v0.16.3"
