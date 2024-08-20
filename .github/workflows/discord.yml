@@ -1,0 +1,20 @@
+name: Notify Discord on page deployment
+
+on:
+  workflow_run:
+    workflows: ["pages build and deployment"]
+    types:
+      - completed
+
+jobs:
+  discordNotification:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Discord Notification
+        if: github.event.deployment_status.state == 'success'
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          curl -H "Content-Type: application/json" \
+          -d "{\"content\": \"🚀 website is deployed! Commit: ${{ github.sha }} by ${{ github.actor }}.\"}" \
+          $DISCORD_WEBHOOK_URL
