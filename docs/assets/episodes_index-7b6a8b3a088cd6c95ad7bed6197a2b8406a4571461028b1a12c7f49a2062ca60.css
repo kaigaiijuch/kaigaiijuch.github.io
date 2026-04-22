@@ -766,17 +766,18 @@ html{
     opacity: 1;
 }
 
+.pagination_box{
+  display: flex;
+  font-size: 1.3rem;
+}
 
+.pagination .page-item.active{
+  color: #666666;
+}
 
-
-
-
-
-
-
-
-
-
+.pagination .page-item.prev, .pagination .page-item.next{
+  font-size: 1.7rem;
+}
 
 @media (max-width: 840px) {
  /* 横幅が840px以下の場合に適用するスタイル */
@@ -991,7 +992,7 @@ overflow: hidden;
     }
 }
 
-    
+
 
 
 

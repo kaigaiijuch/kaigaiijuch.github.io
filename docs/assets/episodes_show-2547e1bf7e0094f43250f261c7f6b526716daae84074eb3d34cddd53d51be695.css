@@ -949,7 +949,11 @@ header iframe{
 
 #link_next{
     float: right;
+}
 
+#link_list{
+    display: block;
+    text-align: center;
 }
 
 section #feedback{
@@ -1121,7 +1125,7 @@ section #feedback{
     }
 
     #link_previous_next{
-        margin: 3rem auto 3rem auto;
+        margin: 3rem auto 1.5rem auto;
     }
 
     .episode_photo img{
